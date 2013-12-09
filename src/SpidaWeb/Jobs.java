@@ -19,6 +19,11 @@ import javax.json.JsonReader;
 public class Jobs {
 	private static JsonArray jsonData;
 	
+	/**
+	 * @param path  The URL of the jobs listings: https://www.spidasoftware.com/apply/jobs
+	 * 
+	 * Class Constructor
+	 */
 	public Jobs(String path) {
 		URL url;
 		JsonReader reader;
@@ -40,6 +45,10 @@ public class Jobs {
 		}
 	}
 	
+	/**
+	 * 
+	 * @return a JsonArry object containing a list of the available jobs
+	 */
 	public JsonArray getJobs() {
 		return jsonData;
 	}
