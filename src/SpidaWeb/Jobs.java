@@ -7,6 +7,7 @@ import java.net.URL;
 
 import javax.json.Json;
 import javax.json.JsonArray;
+import javax.json.JsonObject;
 import javax.json.JsonReader;
 
 /**
@@ -41,7 +42,6 @@ public class Jobs {
 			System.out.print ("An exception occurred." + e);
 		} catch (IOException e) {
 			System.out.print ("An IO exception occurred: " + e);
-			
 		}
 	}
 	
@@ -51,5 +51,10 @@ public class Jobs {
 	 */
 	public JsonArray getJobs() {
 		return jsonData;
+	}
+	
+	public JsonObject getJob(int index) {
+		
+		return jsonData.getJsonObject(index);
 	}
 }
